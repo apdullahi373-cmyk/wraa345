@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Methodologies | Dr. Elena Vance</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            950: '#0f051d',
+                            900: '#1e0b36',
+                            850: '#260e45',
+                            800: '#3b126d',
+                            700: '#581c87',
+                            600: '#7e22ce',
+                            500: '#9333ea',
+                            400: '#c084fc',
+                            300: '#d8b4fe',
+                            200: '#e9d5ff',
+                            100: '#f3e8ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-purple-950 text-purple-100 min-h-screen flex flex-col selection:bg-purple-600 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-purple-950/80 backdrop-blur-md border-b border-purple-800/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-700 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-transform duration-200">
+                        <i class="fa-solid fa-microscope text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-white tracking-tight block leading-tight">Eng Abdullahi Ali Mohamud</span>
+                        <span class="text-xs text-purple-300 font-medium tracking-wide"></span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Home
+                    </a>
+                    <a href="about.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        About
+                    </a>
+                    <a href="skills.html" class="nav-link text-purple-300 font-semibold relative py-1 transition-colors hover:text-white">
+                        Skills
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-400 rounded-full"></span>
+                    </a>
+                    <a href="projects.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Projects
+                    </a>
+                    <a href="contact.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Contact
+                    </a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all duration-200 shadow-md shadow-purple-700/30 hover:shadow-purple-500/40 hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-2 text-xs"></i>Collaborate
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" type="button" aria-expanded="false" class="p-2.5 rounded-lg text-purple-200 hover:text-white hover:bg-purple-900/60 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-purple-900/95 border-b border-purple-800/60 px-4 pt-3 pb-5 space-y-2 backdrop-blur-xl">
+            <a href="index.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-house w-6 text-purple-400"></i> Home
+            </a>
+            <a href="about.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-user-graduate w-6 text-purple-400"></i> About
+            </a>
+            <a href="skills.html" class="block px-4 py-2.5 rounded-lg bg-purple-800/60 text-white font-semibold text-sm">
+                <i class="fa-solid fa-brain w-6 text-purple-400"></i> Skills
+            </a>
+            <a href="projects.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-flask w-6 text-purple-400"></i> Projects & Papers
+            </a>
+            <a href="contact.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-envelope w-6 text-purple-400"></i> Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Page Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">Technical & Research Skills</h1>
+                <p class="mt-4 text-purple-300 text-base sm:text-lg">
+                    Computational tools, statistical methodologies, and scientific expertise built across six years of rigorous academic inquiry.
+                </p>
+                <div class="w-20 h-1 bg-purple-500 rounded-full mx-auto mt-6"></div>
+            </div>
+
+            <!-- Categories of Skills -->
+            <div class="space-y-12">
+
+                <!-- Category 1: Machine Learning & Computational AI -->
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-purple-800/60 text-purple-300 flex items-center justify-center text-lg border border-purple-700/50">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Machine Learning & Artificial Intelligence</h2>
+                            <p class="text-xs text-purple-300/80">Theoretical foundations, architecture design, and scientific modeling</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Skill Card 1 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-900/20">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-lg font-bold text-white">Geometric Deep Learning</h3>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-800/60 text-purple-300">Expert</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-5">
+                                Equivariant graph neural networks (EGNNs), manifold learning, topological data analysis, and SE(3)/SO(3) group symmetries for molecular structures.
+                            </p>
+                            <!-- Progress Bar -->
+                            <div class="w-full bg-purple-950/80 rounded-full h-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-2 rounded-full w-[95%]"></div>
+                            </div>
+                            <div class="mt-2 text-[11px] text-purple-400 font-mono flex justify-between">
+                                <span>PyTorch Geometric, DGL</span>
+                                <span>95%</span>
+                            </div>
+                        </div>
+
+                        <!-- Skill Card 2 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-900/20">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-lg font-bold text-white">Generative & Foundation Models</h3>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-800/60 text-purple-300">Advanced</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-5">
+                                Diffusion models, masked autoencoders, vision transformers, and multi-modal alignment for tabular, spatial, and sequence biological datasets.
+                            </p>
+                            <div class="w-full bg-purple-950/80 rounded-full h-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-2 rounded-full w-[90%]"></div>
+                            </div>
+                            <div class="mt-2 text-[11px] text-purple-400 font-mono flex justify-between">
+                                <span>Transformers, Diffusion, VAEs</span>
+                                <span>90%</span>
+                            </div>
+                        </div>
+
+                        <!-- Skill Card 3 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-900/20">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-lg font-bold text-white">Trustworthy & Explainable AI</h3>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-800/60 text-purple-300">Specialist</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-5">
+                                Conformal prediction, uncertainty quantification, post-hoc attribution (SHAP, Integrated Gradients), counterfactual explanations, and robustness audits.
+                            </p>
+                            <div class="w-full bg-purple-950/80 rounded-full h-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-2 rounded-full w-[92%]"></div>
+                            </div>
+                            <div class="mt-2 text-[11px] text-purple-400 font-mono flex justify-between">
+                                <span>Causal Inference, Interpretability</span>
+                                <span>92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Category 2: Programming & Scientific Computing -->
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-purple-800/60 text-purple-300 flex items-center justify-center text-lg border border-purple-700/50">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Scientific Programming & Tooling</h2>
+                            <p class="text-xs text-purple-300/80">Languages, frameworks, and high-performance computing infrastructures</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Card 1 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fa-brands fa-python text-2xl text-purple-400"></i>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Python Scientific Ecosystem</h3>
+                                    <span class="text-xs text-purple-400">Primary Language</span>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-4">
+                                Deep proficiency in NumPy, SciPy, Pandas, Scikit-Learn, PyTorch, PyTorch Lightning, JAX, Polars, and Numba for hardware-accelerated computation.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">PyTorch</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">NumPy</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">SciPy</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">JAX</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fa-solid fa-server text-2xl text-purple-400"></i>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">HPC & Distributed Clusters</h3>
+                                    <span class="text-xs text-purple-400">Infrastructure</span>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-4">
+                                Experience managing distributed multi-GPU training on Slurm workloads, CUDA optimization, Docker containerization, Singularity, and AWS SageMaker.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">Slurm</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">CUDA</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">Docker</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">Multi-GPU DDP</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <i class="fa-solid fa-chart-line text-2xl text-purple-400"></i>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">R & Statistical Genomics</h3>
+                                    <span class="text-xs text-purple-400">Statistical Analysis</span>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-4">
+                                Bioconductor pipelines, DESeq2, Seurat for single-cell RNA sequencing, survival analysis (Cox Proportional Hazards), and exploratory data visualization with ggplot2.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">R</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">Bioconductor</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">Seurat</span>
+                                <span class="px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 text-xs font-mono">ggplot2</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Category 3: Scientific Research & Scholarly Communication -->
+                <section>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-purple-800/60 text-purple-300 flex items-center justify-center text-lg border border-purple-700/50">
+                            <i class="fa-solid fa-feather-pointed"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Research Methodologies & Dissemination</h2>
+                            <p class="text-xs text-purple-300/80">Academic publishing, grant composition, peer review, and communication</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Skill Item 1 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/20 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-file-lines"></i></div>
+                            <h4 class="text-base font-bold text-white mb-2">Scientific Writing & LaTeX</h4>
+                            <p class="text-xs text-purple-200/80 leading-relaxed">
+                                Authoring peer-reviewed conference proceedings and high-impact journals in LaTeX/Overleaf with reproducible bibliography workflows (Zotero, BibTeX).
+                            </p>
+                        </div>
+
+                        <!-- Skill Item 2 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/20 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                            <h4 class="text-base font-bold text-white mb-2">Experimental Design</h4>
+                            <p class="text-xs text-purple-200/80 leading-relaxed">
+                                Formulating rigorous ablation protocols, null-hypothesis significance testing, cross-validation on sparse biomedical cohorts, and leak-free data partitioning.
+                            </p>
+                        </div>
+
+                        <!-- Skill Item 3 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/20 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-file-contract"></i></div>
+                            <h4 class="text-base font-bold text-white mb-2">Grant Formulation</h4>
+                            <p class="text-xs text-purple-200/80 leading-relaxed">
+                                Drafting competitive grant proposals for NSF, NIH, and philanthropic research trusts with specific aims, milestones, and computational budget allocations.
+                            </p>
+                        </div>
+
+                        <!-- Skill Item 4 -->
+                        <div class="p-6 rounded-2xl bg-purple-900/20 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-chart-pie"></i></div>
+                            <h4 class="text-base font-bold text-white mb-2">Data Visualization</h4>
+                            <p class="text-xs text-purple-200/80 leading-relaxed">
+                                Designing publication-ready scientific illustrations, UMAP manifolds, and statistical diagrams using Matplotlib, Seaborn, Plotly, and Inkscape.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Software & Environment Checklist -->
+                <section class="p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-cubes text-purple-400"></i>
+                        Daily Research Software Stack
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
+                        <div class="p-4 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <i class="fa-brands fa-git-alt text-2xl text-purple-300 mb-2 block"></i>
+                            <span class="text-xs font-semibold text-white">Git / GitHub</span>
+                            <span class="text-[10px] text-purple-400 block mt-0.5">Version Control</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <i class="fa-brands fa-linux text-2xl text-purple-300 mb-2 block"></i>
+                            <span class="text-xs font-semibold text-white">Linux / Bash</span>
+                            <span class="text-[10px] text-purple-400 block mt-0.5">OS & Scripting</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <i class="fa-brands fa-docker text-2xl text-purple-300 mb-2 block"></i>
+                            <span class="text-xs font-semibold text-white">Docker</span>
+                            <span class="text-[10px] text-purple-400 block mt-0.5">Containerization</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <i class="fa-solid fa-cubes-stacked text-2xl text-purple-300 mb-2 block"></i>
+                            <span class="text-xs font-semibold text-white">Jupyter Lab</span>
+                            <span class="text-[10px] text-purple-400 block mt-0.5">Rapid Prototyping</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <i class="fa-solid fa-chart-simple text-2xl text-purple-300 mb-2 block"></i>
+                            <span class="text-xs font-semibold text-white">W&B / MLflow</span>
+                            <span class="text-[10px] text-purple-400 block mt-0.5">Experiment Tracking</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 transition-all">
+                            <i class="fa-solid fa-book-bookmark text-2xl text-purple-300 mb-2 block"></i>
+                            <span class="text-xs font-semibold text-white">Overleaf / LaTeX</span>
+                            <span class="text-[10px] text-purple-400 block mt-0.5">Publishing</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-purple-950 border-t border-purple-800/40 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-lg font-bold text-white block">Dr. Elena Vance</span>
+                    <p class="text-xs text-purple-300/70 mt-1">Laboratory for Computational Intelligence & Systems Medicine</p>
+                </div>
+
+                <!-- Academic & Social Links -->
+                <div class="flex items-center gap-5 text-lg">
+                    <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="Google Scholar">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="ORCID">
+                        <i class="fa-brands fa-orcid"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:elena.vance@university.edu" class="text-purple-300 hover:text-white transition-colors" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="text-xs text-purple-400/60 text-center md:text-right">
+                    © 2026 Dr. Elena Vance. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>

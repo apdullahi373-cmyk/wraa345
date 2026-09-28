@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Inquiries | Dr. Elena Vance</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            950: '#0f051d',
+                            900: '#1e0b36',
+                            850: '#260e45',
+                            800: '#3b126d',
+                            700: '#581c87',
+                            600: '#7e22ce',
+                            500: '#9333ea',
+                            400: '#c084fc',
+                            300: '#d8b4fe',
+                            200: '#e9d5ff',
+                            100: '#f3e8ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-purple-950 text-purple-100 min-h-screen flex flex-col selection:bg-purple-600 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-purple-950/80 backdrop-blur-md border-b border-purple-800/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-700 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-transform duration-200">
+                        <i class="fa-solid fa-microscope text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-white tracking-tight block leading-tight">Eng Abdullahi Ali Mohamud</span>
+                        <span class="text-xs text-purple-300 font-medium tracking-wide"></span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Home
+                    </a>
+                    <a href="about.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        About
+                    </a>
+                    <a href="skills.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Skills
+                    </a>
+                    <a href="projects.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Projects
+                    </a>
+                    <a href="contact.html" class="nav-link text-purple-300 font-semibold relative py-1 transition-colors hover:text-white">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-400 rounded-full"></span>
+                    </a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all duration-200 shadow-md shadow-purple-700/30 hover:shadow-purple-500/40 hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-2 text-xs"></i>Collaborate
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" type="button" aria-expanded="false" class="p-2.5 rounded-lg text-purple-200 hover:text-white hover:bg-purple-900/60 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-purple-900/95 border-b border-purple-800/60 px-4 pt-3 pb-5 space-y-2 backdrop-blur-xl">
+            <a href="index.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-house w-6 text-purple-400"></i> Home
+            </a>
+            <a href="about.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-user-graduate w-6 text-purple-400"></i> About
+            </a>
+            <a href="skills.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-brain w-6 text-purple-400"></i> Skills
+            </a>
+            <a href="projects.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-flask w-6 text-purple-400"></i> Projects & Papers
+            </a>
+            <a href="contact.html" class="block px-4 py-2.5 rounded-lg bg-purple-800/60 text-white font-semibold text-sm">
+                <i class="fa-solid fa-envelope w-6 text-purple-400"></i> Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Page Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">Contact & Academic Inquiries</h1>
+                <p class="mt-4 text-purple-300 text-base sm:text-lg">
+                    Have an inquiry about research collaborations, speaking invitations, or graduate mentorship? Let's connect.
+                </p>
+                <div class="w-20 h-1 bg-purple-500 rounded-full mx-auto mt-6"></div>
+            </div>
+
+            <!-- Two-Column Grid: Left Contact Info / Right Contact Form -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Left Column: Affiliation & Office Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- Office Details Card -->
+                    <div class="p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 shadow-xl">
+                        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-compass text-purple-400"></i>
+                            Academic Affiliation
+                        </h2>
+
+                        <div class="space-y-6 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-purple-800/50 flex-shrink-0 flex items-center justify-center text-purple-300 border border-purple-700/50">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-base">Office & Laboratory</h3>
+                                    <p class="text-purple-200/80 mt-1 leading-relaxed">
+                                        Gates Computer Science Building, Room 342<br>
+                                        353 Serra Mall, Stanford University<br>
+                                        Stanford, CA 94305, USA
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-purple-800/50 flex-shrink-0 flex items-center justify-center text-purple-300 border border-purple-700/50">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-base">Direct Email</h3>
+                                    <p class="text-purple-200/80 mt-1">
+                                        <a href="mailto:elena.vance@stanford.edu" class="text-purple-300 hover:text-white underline decoration-purple-500 underline-offset-4 transition-colors">
+                                            elena.vance@stanford.edu
+                                        </a>
+                                    </p>
+                                    <p class="text-xs text-purple-400/80 mt-0.5">PGP Key available upon academic request</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-purple-800/50 flex-shrink-0 flex items-center justify-center text-purple-300 border border-purple-700/50">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-base">Student Office Hours</h3>
+                                    <p class="text-purple-200/80 mt-1">
+                                        Tuesdays & Thursdays<br>
+                                        2:00 PM – 4:00 PM (PT) or by Zoom appointment
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scholarly Profiles Card -->
+                    <div class="p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 shadow-xl">
+                        <h2 class="text-lg font-bold text-white mb-4">Academic & Research Networks</h2>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 text-purple-200 hover:text-white flex items-center gap-3 text-xs font-semibold transition-all">
+                                <i class="fa-solid fa-graduation-cap text-base text-purple-400"></i>
+                                <span>Google Scholar</span>
+                            </a>
+                            <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 text-purple-200 hover:text-white flex items-center gap-3 text-xs font-semibold transition-all">
+                                <i class="fa-brands fa-orcid text-base text-emerald-400"></i>
+                                <span>ORCID iD</span>
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 text-purple-200 hover:text-white flex items-center gap-3 text-xs font-semibold transition-all">
+                                <i class="fa-brands fa-github text-base text-purple-300"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 hover:border-purple-600/50 text-purple-200 hover:text-white flex items-center gap-3 text-xs font-semibold transition-all">
+                                <i class="fa-brands fa-linkedin text-base text-indigo-400"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration Notice -->
+                    <div class="p-6 rounded-2xl bg-purple-900/20 border border-purple-800/40 text-xs text-purple-200/80 leading-relaxed">
+                        <strong class="text-white block mb-1">Notice for Prospective Students:</strong>
+                        If you are a student interested in joining the lab or pursuing thesis mentorship, please include your CV and a brief description of your research interests in the message body.
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Contact Form -->
+                <div class="lg:col-span-7">
+                    <div class="p-8 sm:p-10 rounded-3xl bg-purple-900/30 border border-purple-800/40 shadow-xl relative">
+                        <h2 class="text-2xl font-bold text-white mb-2">Send a Message</h2>
+                        <p class="text-xs sm:text-sm text-purple-300 mb-8">
+                            Fill out the form below. Messages are typically answered within 2 business days.
+                        </p>
+
+                        <!-- Form Feedback Alert (Controlled by JS) -->
+                        <div id="form-feedback" class="hidden mb-6"></div>
+
+                        <form id="contact-form" class="space-y-6" novalidate>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <!-- Name Input -->
+                                <div>
+                                    <label for="name" class="block text-xs font-semibold text-purple-200 uppercase tracking-wider mb-2">
+                                        Your Full Name <span class="text-purple-400">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        required 
+                                        placeholder="e.g. Prof. Arthur Pendelton"
+                                        class="w-full px-4 py-3 rounded-xl bg-purple-950/70 border border-purple-800/60 text-white placeholder-purple-400/40 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                    >
+                                </div>
+
+                                <!-- Email Input -->
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold text-purple-200 uppercase tracking-wider mb-2">
+                                        Email Address <span class="text-purple-400">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        required 
+                                        placeholder="e.g. arthur@institution.edu"
+                                        class="w-full px-4 py-3 rounded-xl bg-purple-950/70 border border-purple-800/60 text-white placeholder-purple-400/40 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Subject / Inquiry Topic -->
+                            <div>
+                                <label for="topic" class="block text-xs font-semibold text-purple-200 uppercase tracking-wider mb-2">
+                                    Inquiry Subject
+                                </label>
+                                <select 
+                                    id="topic" 
+                                    name="topic" 
+                                    class="w-full px-4 py-3 rounded-xl bg-purple-950/70 border border-purple-800/60 text-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                >
+                                    <option value="collaboration">Research Collaboration / Grant Consortium</option>
+                                    <option value="speaking">Keynote / Seminar / Workshop Invitation</option>
+                                    <option value="student">Graduate / Postdoc Mentorship Inquiry</option>
+                                    <option value="paper">Question Regarding a Published Manuscript</option>
+                                    <option value="other">General Academic Inquiry</option>
+                                </select>
+                            </div>
+
+                            <!-- Message Body -->
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-purple-200 uppercase tracking-wider mb-2">
+                                    Your Message <span class="text-purple-400">*</span>
+                                </label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="5" 
+                                    required 
+                                    placeholder="Please share details about your inquiry, relevant papers, timelines, or collaboration ideas..."
+                                    class="w-full px-4 py-3 rounded-xl bg-purple-950/70 border border-purple-800/60 text-white placeholder-purple-400/40 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                                ></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button 
+                                type="submit" 
+                                class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all duration-200 shadow-lg shadow-purple-700/30 hover:shadow-purple-500/40 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
+                            >
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-purple-950 border-t border-purple-800/40 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-lg font-bold text-white block">Dr. Elena Vance</span>
+                    <p class="text-xs text-purple-300/70 mt-1">Laboratory for Computational Intelligence & Systems Medicine</p>
+                </div>
+
+                <!-- Academic & Social Links -->
+                <div class="flex items-center gap-5 text-lg">
+                    <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="Google Scholar">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="ORCID">
+                        <i class="fa-brands fa-orcid"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:elena.vance@university.edu" class="text-purple-300 hover:text-white transition-colors" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="text-xs text-purple-400/60 text-center md:text-right">
+                    © 2026 Dr. Elena Vance. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>

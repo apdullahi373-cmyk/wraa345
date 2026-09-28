@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects & Papers | Dr. Elena Vance</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            950: '#0f051d',
+                            900: '#1e0b36',
+                            850: '#260e45',
+                            800: '#3b126d',
+                            700: '#581c87',
+                            600: '#7e22ce',
+                            500: '#9333ea',
+                            400: '#c084fc',
+                            300: '#d8b4fe',
+                            200: '#e9d5ff',
+                            100: '#f3e8ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-purple-950 text-purple-100 min-h-screen flex flex-col selection:bg-purple-600 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-purple-950/80 backdrop-blur-md border-b border-purple-800/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-700 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-transform duration-200">
+                        <i class="fa-solid fa-microscope text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-white tracking-tight block leading-tight">Eng Abdullahi Ali Mohamud</span>
+                        <span class="text-xs text-purple-300 font-medium tracking-wide"></span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Home
+                    </a>
+                    <a href="about.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        About
+                    </a>
+                    <a href="skills.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Skills
+                    </a>
+                    <a href="projects.html" class="nav-link text-purple-300 font-semibold relative py-1 transition-colors hover:text-white">
+                        Projects
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-400 rounded-full"></span>
+                    </a>
+                    <a href="contact.html" class="nav-link text-purple-200/80 font-medium relative py-1 transition-colors hover:text-white">
+                        Contact
+                    </a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all duration-200 shadow-md shadow-purple-700/30 hover:shadow-purple-500/40 hover:-translate-y-0.5">
+                        <i class="fa-solid fa-paper-plane mr-2 text-xs"></i>Collaborate
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" type="button" aria-expanded="false" class="p-2.5 rounded-lg text-purple-200 hover:text-white hover:bg-purple-900/60 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-purple-900/95 border-b border-purple-800/60 px-4 pt-3 pb-5 space-y-2 backdrop-blur-xl">
+            <a href="index.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-house w-6 text-purple-400"></i> Home
+            </a>
+            <a href="about.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-user-graduate w-6 text-purple-400"></i> About
+            </a>
+            <a href="skills.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-brain w-6 text-purple-400"></i> Skills
+            </a>
+            <a href="projects.html" class="block px-4 py-2.5 rounded-lg bg-purple-800/60 text-white font-semibold text-sm">
+                <i class="fa-solid fa-flask w-6 text-purple-400"></i> Projects & Papers
+            </a>
+            <a href="contact.html" class="block px-4 py-2.5 rounded-lg text-purple-200 hover:bg-purple-800/40 hover:text-white font-medium text-sm transition-colors">
+                <i class="fa-solid fa-envelope w-6 text-purple-400"></i> Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Page Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">Research Projects & Publications</h1>
+                <p class="mt-4 text-purple-300 text-base sm:text-lg">
+                    Peer-reviewed manuscripts, open-source computational toolkits, and clinical AI benchmarks.
+                </p>
+                <div class="w-20 h-1 bg-purple-500 rounded-full mx-auto mt-6"></div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-14">
+                <button type="button" data-filter="all" class="filter-btn px-5 py-2.5 rounded-xl bg-purple-600 text-white font-semibold text-xs sm:text-sm transition-all duration-200 shadow-md">
+                    All Projects (6)
+                </button>
+                <button type="button" data-filter="ml" class="filter-btn px-5 py-2.5 rounded-xl bg-purple-900/40 hover:bg-purple-800/50 text-purple-300 font-semibold text-xs sm:text-sm border border-purple-800/40 transition-all duration-200">
+                    <i class="fa-solid fa-network-wired mr-1.5"></i> Machine Learning
+                </button>
+                <button type="button" data-filter="healthcare" class="filter-btn px-5 py-2.5 rounded-xl bg-purple-900/40 hover:bg-purple-800/50 text-purple-300 font-semibold text-xs sm:text-sm border border-purple-800/40 transition-all duration-200">
+                    <i class="fa-solid fa-heart-pulse mr-1.5"></i> Healthcare & Bio
+                </button>
+                <button type="button" data-filter="tools" class="filter-btn px-5 py-2.5 rounded-xl bg-purple-900/40 hover:bg-purple-800/50 text-purple-300 font-semibold text-xs sm:text-sm border border-purple-800/40 transition-all duration-200">
+                    <i class="fa-solid fa-toolbox mr-1.5"></i> Open Source Tools
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Project 1 (ML / Healthcare) -->
+                <div data-category="ml" class="project-card flex flex-col justify-between p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-900/30">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-800/60 text-purple-200 text-xs font-semibold border border-purple-700/50">
+                                Nature Machine Intelligence (2025)
+                            </span>
+                            <span class="text-xs text-purple-400 font-mono"><i class="fa-solid fa-certificate text-purple-400 mr-1"></i>First Author</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                            NeuroGraph: Equivariant GNNs for Connectome Mapping
+                        </h3>
+                        <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-6">
+                            Formulated an SE(3)-equivariant graph neural network tailored for functional MRI connectomes. Maps long-range neurological disruptions in neurodegenerative pathology with a 24% boost over standard spectral GNNs.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 text-xs text-purple-300 mb-6">
+                            <span class="font-bold text-white"><i class="fa-solid fa-trophy text-amber-400 mr-1.5"></i>Impact:</span> Evaluated on 1,200+ patient neuroimaging datasets from the Human Connectome Project.
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">PyTorch Geometric</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Equivariant Neural Nets</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">fMRI Connectomics</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 border-t border-purple-800/40 flex items-center justify-between">
+                        <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold">
+                            <a href="#" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-regular fa-file-pdf"></i> Read Paper
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github"></i> Code (450★)
+                            </a>
+                        </div>
+                        <span class="text-xs text-purple-400/80">DOI: 10.1038/s42256</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Healthcare) -->
+                <div data-category="healthcare" class="project-card flex flex-col justify-between p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-900/30">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-800/60 text-purple-200 text-xs font-semibold border border-purple-700/50">
+                                Cell Systems (2024)
+                            </span>
+                            <span class="text-xs text-purple-400 font-mono">Co-Lead Investigator</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                            BioPredict: Multi-Omics Early Biomarker Discovery
+                        </h3>
+                        <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-6">
+                            Engineered an attention-based multi-modal transformer synchronizing single-cell RNA-seq, bulk methylation, and clinical histology to discover early oncological drug resistance markers.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 text-xs text-purple-300 mb-6">
+                            <span class="font-bold text-white"><i class="fa-solid fa-chart-line text-emerald-400 mr-1.5"></i>Result:</span> Uncovered 3 previously uncharacterized kinase pathways validated in wet-lab trials.
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Multi-Modal Transformers</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">scRNA-seq</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Bioconductor</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 border-t border-purple-800/40 flex items-center justify-between">
+                        <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold">
+                            <a href="#" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-regular fa-file-pdf"></i> Read Paper
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                        <span class="text-xs text-purple-400/80">PMC982314</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 (ML) -->
+                <div data-category="ml" class="project-card flex flex-col justify-between p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-900/30">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-800/60 text-purple-200 text-xs font-semibold border border-purple-700/50">
+                                NeurIPS 2024 Spotlight
+                            </span>
+                            <span class="text-xs text-purple-400 font-mono">Lead Author</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                            TrustEval: Benchmarking Clinical AI Explainability
+                        </h3>
+                        <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-6">
+                            A standardized diagnostic suite designed to probe spurious correlations, demographic biases, and confidence miscalibration in vision-language models deployed across health systems.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 text-xs text-purple-300 mb-6">
+                            <span class="font-bold text-white"><i class="fa-solid fa-shield text-purple-400 mr-1.5"></i>Benchmark:</span> Adopted by 14 international clinical research consortia as a pre-deployment sanity check.
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Explainable AI (XAI)</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Conformal Prediction</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Fairness Audits</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 border-t border-purple-800/40 flex items-center justify-between">
+                        <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold">
+                            <a href="#" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-regular fa-file-pdf"></i> Read Paper
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github"></i> Code (820★)
+                            </a>
+                        </div>
+                        <span class="text-xs text-purple-400/80">arXiv:2409.11204</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Tools) -->
+                <div data-category="tools" class="project-card flex flex-col justify-between p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-900/30">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-800/60 text-purple-200 text-xs font-semibold border border-purple-700/50">
+                                Open Source Software
+                            </span>
+                            <span class="text-xs text-purple-400 font-mono">Creator & Maintainer</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                            PyBioStats: Statistical Toolkit for Biological Science
+                        </h3>
+                        <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-6">
+                            A lightweight Python library streamlining permutation tests, false discovery rate (FDR) corrections, non-parametric curve fitting, and high-throughput differential statistics.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 text-xs text-purple-300 mb-6">
+                            <span class="font-bold text-white"><i class="fa-solid fa-download text-indigo-400 mr-1.5"></i>Adoption:</span> Over 60,000+ PyPI downloads and referenced in 40+ independent scientific papers.
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Python / NumPy</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Cython Acceleration</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">PyPI Package</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 border-t border-purple-800/40 flex items-center justify-between">
+                        <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold">
+                            <a href="https://pypi.org" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-solid fa-cube"></i> PyPI Package
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github"></i> GitHub (1.2k★)
+                            </a>
+                        </div>
+                        <span class="text-xs text-purple-400/80">MIT License</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 (ML / Tools) -->
+                <div data-category="tools" class="project-card flex flex-col justify-between p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-900/30">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-800/60 text-purple-200 text-xs font-semibold border border-purple-700/50">
+                                JOSS Paper (2024)
+                            </span>
+                            <span class="text-xs text-purple-400 font-mono">Core Contributor</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                            SynthGen: Privacy-Preserving Synthetic Clinical Data
+                        </h3>
+                        <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-6">
+                            Generative diffusion suite for synthesizing high-dimensional electronic health records (EHR) preserving longitudinal correlations with formal differential privacy ($\epsilon \le 1.0$) guarantees.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 text-xs text-purple-300 mb-6">
+                            <span class="font-bold text-white"><i class="fa-solid fa-lock text-purple-400 mr-1.5"></i>Privacy:</span> Clinically verified zero-reidentification leakage on MIMIC-IV benchmark.
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Differential Privacy</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Diffusion Models</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">EHR Synthesis</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 border-t border-purple-800/40 flex items-center justify-between">
+                        <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold">
+                            <a href="#" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-regular fa-file-pdf"></i> Read Paper
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                        <span class="text-xs text-purple-400/80">BSD-3 License</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 (Healthcare / ML) -->
+                <div data-category="healthcare" class="project-card flex flex-col justify-between p-8 rounded-3xl bg-purple-900/30 border border-purple-800/40 hover:border-purple-500/60 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-900/30">
+                    <div>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-800/60 text-purple-200 text-xs font-semibold border border-purple-700/50">
+                                ICML 2023 Oral
+                            </span>
+                            <span class="text-xs text-purple-400 font-mono">Co-Author</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                            TopoBind: Geometric Deep Learning for Protein Docking
+                        </h3>
+                        <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed mb-6">
+                            Rigid and flexible ligand-receptor affinity estimation via continuous surface convolutions, cutting docking compute times by 80x compared to classic physics-based Monte Carlo sampling.
+                        </p>
+                        <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-800/40 text-xs text-purple-300 mb-6">
+                            <span class="font-bold text-white"><i class="fa-solid fa-bolt text-amber-400 mr-1.5"></i>Speedup:</span> 80x screening acceleration tested across PDBbind benchmark.
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Geometric Deep Learning</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">Protein Structure</span>
+                            <span class="px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-mono">CUDA Kernels</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 border-t border-purple-800/40 flex items-center justify-between">
+                        <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold">
+                            <a href="#" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-regular fa-file-pdf"></i> Read Paper
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white inline-flex items-center gap-1.5 transition-colors">
+                                <i class="fa-brands fa-github"></i> Code (640★)
+                            </a>
+                        </div>
+                        <span class="text-xs text-purple-400/80">ICML Proc.</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-purple-950 border-t border-purple-800/40 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="text-lg font-bold text-white block">Dr. Elena Vance</span>
+                    <p class="text-xs text-purple-300/70 mt-1">Laboratory for Computational Intelligence & Systems Medicine</p>
+                </div>
+
+                <!-- Academic & Social Links -->
+                <div class="flex items-center gap-5 text-lg">
+                    <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="Google Scholar">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="ORCID">
+                        <i class="fa-brands fa-orcid"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-white transition-colors" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:elena.vance@university.edu" class="text-purple-300 hover:text-white transition-colors" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="text-xs text-purple-400/60 text-center md:text-right">
+                    © 2026 Dr. Elena Vance. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
